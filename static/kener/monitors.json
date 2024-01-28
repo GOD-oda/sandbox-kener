@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Google Search",
+        "description": "Search the world's information, including webpages, images, videos and more. <a href=\"https://www.google.com/webhp\" class=\"font-medium underline underline-offset-4\" target=\"_blank\">https://www.google.com/webhp</a>",
+        "tag": "google-search",
+        "image": "/google.png",
+        "api": {
+            "method": "GET",
+            "url": "https://www.google.com/webhp",
+            "eval": "(function (statusCode, responseTime, responseData) {\n\tlet statusCodeShort = Math.floor(statusCode/100);\n    if(statusCode == 429 || (statusCodeShort >=2 && statusCodeShort <= 3)) {\n        return {\n\t\t\tstatus: 'UP',\n\t\t\tlatency: responseTime,\n        }\n    } \n\treturn {\n\t\tstatus: 'DOWN',\n\t\tlatency: responseTime,\n\t}\n})",
+            "timeout": 10000
+        },
+        "folderName": "google-search",
+        "path0Day": "./static/kener/google-search.0day.utc.json",
+        "hasAPI": true
+    },
+    {
+        "name": "Svelte Website",
+        "description": "Cybernetically enhanced web apps <a href=\"https://svelte.dev/\" class=\"font-medium underline underline-offset-4\" target=\"_blank\">https://svelte.dev/</a>",
+        "tag": "svelte-website",
+        "api": {
+            "method": "GET",
+            "url": "https://svelte.dev/",
+            "eval": "(function (statusCode, responseTime, responseData) {\n\tlet statusCodeShort = Math.floor(statusCode/100);\n    if(statusCode == 429 || (statusCodeShort >=2 && statusCodeShort <= 3)) {\n        return {\n\t\t\tstatus: 'UP',\n\t\t\tlatency: responseTime,\n        }\n    } \n\treturn {\n\t\tstatus: 'DOWN',\n\t\tlatency: responseTime,\n\t}\n})",
+            "timeout": 10000
+        },
+        "image": "/svelte.svg",
+        "folderName": "svelte-website",
+        "path0Day": "./static/kener/svelte-website.0day.utc.json",
+        "hasAPI": true
+    },
+    {
+        "name": "Earth",
+        "description": "Our blue planet",
+        "tag": "earth",
+        "defaultStatus": "UP",
+        "image": "/earth.png",
+        "folderName": "earth",
+        "path0Day": "./static/kener/earth.0day.utc.json",
+        "hasAPI": false
+    },
+    {
+        "name": "Oda World",
+        "tag": "oda-world",
+        "api": {
+            "method": "GET",
+            "url": "https://oda.world",
+            "eval": "(function (statusCode, responseTime, responseData) {\n\tlet statusCodeShort = Math.floor(statusCode/100);\n    if(statusCode == 429 || (statusCodeShort >=2 && statusCodeShort <= 3)) {\n        return {\n\t\t\tstatus: 'UP',\n\t\t\tlatency: responseTime,\n        }\n    } \n\treturn {\n\t\tstatus: 'DOWN',\n\t\tlatency: responseTime,\n\t}\n})",
+            "timeout": 10000
+        },
+        "folderName": "oda-world",
+        "description": "<a href=\"https://oda.world\" class=\"font-medium underline underline-offset-4\" target=\"_blank\">https://oda.world</a>",
+        "path0Day": "./static/kener/oda-world.0day.utc.json",
+        "hasAPI": true
+    }
+]
